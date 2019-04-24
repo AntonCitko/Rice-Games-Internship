@@ -7,6 +7,7 @@ Rock, Paper, Scissors+ is a new take on the classic game from which it gets its 
 This version of the game has a number of additional components that make it more interesting:
 
 - The game is based on a point system where winning streaks increase the number of points the winner receives.  
+
 | Consecutive Wins | Score Multiplier |
 |------------------|------------------|
 | 2 | 1.2x |
@@ -15,6 +16,7 @@ This version of the game has a number of additional components that make it more
 | 5 | 2x |
 | 6 | 2.5x |
 | 7+ | 3x |
+
 - If a player has won 3 or 6 times in a row, their options for the next round are only the move they played in the last round and one random option generated from the remaining moves
 - If a player has played the same for the last 3 rounds, their score gets doubled on the next round.
 
