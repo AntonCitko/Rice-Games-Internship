@@ -22,7 +22,7 @@ This version of the game has a number of additional components that make it more
 
 ### Image of game
 
-![RPS+] (https://github.com/antonqp/Rice-Games-Internship/blob/master/Session%202P%20-%20Rock%2C%20Paper%2C%20Scissors%20Plus/RPS%2B%20In%20Game.png)
+![RPS+](https://github.com/antonqp/Rice-Games-Internship/blob/master/Session%202P%20-%20Rock%2C%20Paper%2C%20Scissors%20Plus/RPS%2B%20In%20Game.png)
 
 The game is all text based. Each round the user types in the move they would like to play based on the options presented. It plays until the number of rounds initially specified is reached.
 
