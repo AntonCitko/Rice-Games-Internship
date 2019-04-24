@@ -25,11 +25,6 @@ class Game:
                 p1_choice = self.player1.prompt_turn(False)
                 p2_choice = self.player2.prompt_turn(False)
             
-#            while p1_choice == p2_choice:
-#                print("Both players had same choice, try again.")
-#                p1_choice = self.player1.prompt_turn()
-#                p2_choice = self.player2.prompt_turn()
-            
             if p1_choice == p2_choice:
                 print("Both players had same choice. It is a tie, no points.")
                 self.last_winner = 0
