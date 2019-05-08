@@ -136,10 +136,22 @@ SELECT * FROM members;
 SELECT p.member_id, p.amount, m.name, p.payday, m.role, p.memo FROM payment p, members m
 WHERE p.member_id = m.member_id;
 
+SELECT role AS Role, SUM(total) AS `Total Paid` FROM members
+WHERE Role = 'Artist';
 
+SELECT role AS Role, SUM(total) AS `Total Paid` FROM members
+WHERE Role = 'Composer';
 
+SELECT name as Name,
+	CASE
+		WHEN total >= 150 THEN 'Paid Lots'
+        WHEN total >= 120 AND total < 150 THEN 'Paid Well'
+        WHEN total >= 100 AND total < 120  THEN 'Needs More'
+        ELSE 'Neds Way More'
+	END AS `Money Status`
+FROM members;
 
-
+FROM members;
 
 
 
