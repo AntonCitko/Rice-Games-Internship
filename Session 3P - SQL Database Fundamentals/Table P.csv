@@ -1,0 +1,7 @@
+id,name,eng_name,hp,attack,weakness1,weakness2,weakness3,weakness4
+1,ari,ant,3,2,a,ri,,
+2,imori,salamander,4,2,i,mo,ri,
+3,uzura,quail,6,1,u,zu,ra,
+4,kaeru,frog,4,2,ka,e,ru,
+5,oni,demon,8,4,o,ni,,
+6,mokuoni,"wood demon",30,6,mo,ku,o,ni

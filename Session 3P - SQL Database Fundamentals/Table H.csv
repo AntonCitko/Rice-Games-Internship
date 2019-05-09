@@ -1,0 +1,12 @@
+payment_id,member_id,payday,recipient,amount,memo
+9,2,2018-01-31,Emily,130,"Shu Final Render + Expressions"
+10,3,2018-02-07,William,130,"Jin Final Render + Expressions"
+11,4,2018-01-30,Rachel,130,"Kou Final Render + Expressions"
+12,6,2018-02-26,Brian,60,"March Payment 2019"
+13,7,2018-02-26,MikkelCloud,50,"March Payment 2019"
+14,8,2018-02-26,Robert,50,"March Payment 2019"
+15,5,2018-03-24,Jonas,72,"Decorations 1B"
+16,5,2018-04-07,Jonas,120,"Backgrounds 1A"
+17,6,2018-04-09,Brian,60,"April Payment 2019"
+18,7,2018-04-09,MikkelCloud,50,"April Payment 2019"
+19,8,2018-04-09,Robert,50,"April Payment 2019"

@@ -151,9 +151,45 @@ SELECT name as Name,
 	END AS `Money Status`
 FROM members;
 
-FROM members;
+CREATE TABLE IF NOT EXISTS sanrin_enemies (
+	id int NOT NULL AUTO_INCREMENT,
+    name varchar(15) UNIQUE,
+    eng_name varchar(15) UNIQUE,
+    hp int NOT NULL,
+    attack int NOT NULL,
+    weakness1 varchar(4) NOT NULL,
+    weakness2 varchar(4) DEFAULT '',
+    weakness3 varchar(4) DEFAULT '',
+    weakness4 varchar(4) DEFAULT '',
+    PRIMARY KEY (id)
+);
 
+INSERT INTO sanrin_enemies (id, name, eng_name, hp, attack, weakness1, weakness2, weakness3, weakness4)
+VALUES
+	(1, 'ari', 'ant', 3, 2, 'a', 'ri', DEFAULT, DEFAULT),
+    (2, 'imori', 'salamander', 4, 2, 'i', 'mo', 'ri', DEFAULT),
+    (3, 'uzura', 'quail', 6, 1, 'u', 'zu', 'ra', DEFAULT),
+    (4, 'kaeru', 'frog', 4, 2, 'ka', 'e', 'ru', DEFAULT),
+    (5, 'oni', 'demon', 8, 4, 'o', 'ni', DEFAULT, DEFAULT),
+    (6, 'mokuoni', 'wood demon', 30, 6, 'mo', 'ku', 'o', 'ni');
 
+SELECT * FROM sanrin_enemies;
+
+SELECT name, eng_name,
+	CASE
+		WHEN hp > 10 THEN 'BOSS'
+        ELSE 'ZAKO'
+	END AS type
+FROM sanrin_enemies
+ORDER BY type DESC;
+
+SELECT name, eng_name, hp, attack
+FROM sanrin_enemies
+ORDER BY attack;
+
+SELECT name, eng_name, hp, attack
+FROM sanrin_enemies
+ORDER BY hp;
 
 
 
