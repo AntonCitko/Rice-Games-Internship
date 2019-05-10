@@ -129,6 +129,10 @@ VALUES
 		50,
 		'April Payment 2019'
     );
+    
+UPDATE members m
+SET total = (SELECT SUM(amount) AS total FROM payment p
+WHERE p.member_id = m.member_id);
 
 SELECT * FROM payment;
 SELECT * FROM members;
