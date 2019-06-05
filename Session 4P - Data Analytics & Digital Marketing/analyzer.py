@@ -62,11 +62,16 @@ class App(QtWidgets.QMainWindow):
         comboBox.move(250, 70)
         comboBox.currentIndexChanged.connect(self.selectionchange)
         
+        b1 = QtWidgets.QPushButton(self)
+        b1.setText("Download Graph")
+        b1.setGeometry(325, 725, 150, 50)
+        b1.clicked.connect(self.download_graph)
+        
         self.figure = plt.figure()
         self.canvas = FigureCanvas(self.figure)
         self.ax = self.figure.add_subplot(111)
         self.plot_widget = QtWidgets.QWidget(self)
-        self.plot_widget.setGeometry(0, 100, 800, 700)
+        self.plot_widget.setGeometry(0, 100, 800, 600)
         plot_box = QtWidgets.QVBoxLayout()
         plot_box.addWidget(self.canvas)
         self.plot_widget.setLayout(plot_box)
@@ -81,6 +86,12 @@ class App(QtWidgets.QMainWindow):
           self.update()
           
           self.plot()
+          
+    def download_graph(self):
+        if self.option != "Make Selection":
+            if not os.path.exists("graphs"):
+                os.makedirs("graphs")
+            plt.savefig(os.getcwd() + '/graphs/' + self.option.replace("csv", "") + ".jpg")
     
     def plot(self):
         self.figure.clf()
